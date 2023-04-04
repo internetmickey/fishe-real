@@ -7,7 +7,7 @@ using TMPro;
 public class Player2Controller : MonoBehaviour
 {
     public Rigidbody2D playerRb;
-    public TextMeshProUGUI debugGround;
+    
     public float speed = 15.0f;
     private Vector2 jumpForce = new Vector2(0, 33);
 
@@ -39,21 +39,10 @@ public class Player2Controller : MonoBehaviour
         playerRb.AddForce(Vector2.right * speed * playerInput * Time.deltaTime);
 
         //Player jump script
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && isGrounded == true)
         {
             playerRb.AddForce(jumpForce, ForceMode2D.Impulse);
         }
-
-        //isGrounded debug
-        if (isGrounded == true)
-        {
-            debugGround.text = "Grounded";
-        }
-        else
-        {
-            debugGround.text = "Not Grounded";
-        }
-
 
     }
 

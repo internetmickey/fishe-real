@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GunController : MonoBehaviour
+public class GunControllerPlayer2 : MonoBehaviour
 {
     public Rigidbody2D playerRb;
     public GameObject projectilePrefab;
@@ -12,7 +12,7 @@ public class GunController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float playerInput = Input.GetAxis("Horizontal");
+        float playerInput = Input.GetAxis("Player 2 Horizontal");
 
         if (playerInput < 0)
         {
@@ -23,7 +23,7 @@ public class GunController : MonoBehaviour
             transform.localRotation = Quaternion.Euler(0, 180, 0);
         }
 
-        if (Input.GetKeyDown(KeyCode.V))
+        if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             FireGun();
         }
@@ -44,3 +44,4 @@ public class GunController : MonoBehaviour
         }
     }
 }
+

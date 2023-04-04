@@ -7,7 +7,7 @@ using TMPro;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D playerRb;
-    public TextMeshProUGUI debugGround;
+    
     public float speed = 15.0f;
     private Vector2 jumpForce = new Vector2(0,33);
 
@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
+        //Player movement
         float playerInput = Input.GetAxis("Horizontal");
         playerRb.AddForce(Vector2.right * speed * playerInput * Time.deltaTime);
 
@@ -44,14 +45,8 @@ public class PlayerController : MonoBehaviour
             playerRb.AddForce(jumpForce, ForceMode2D.Impulse);
         }
 
-        //isGrounded debug
-        if (isGrounded== true)
-        {
-            debugGround.text = "Grounded";
-        } else
-        {
-            debugGround.text = "Not Grounded";
-        }
+        
+        
 
        
     }

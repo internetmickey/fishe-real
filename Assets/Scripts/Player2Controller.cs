@@ -4,12 +4,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PlayerController : MonoBehaviour
+public class Player2Controller : MonoBehaviour
 {
     public Rigidbody2D playerRb;
     public TextMeshProUGUI debugGround;
     public float speed = 15.0f;
-    private Vector2 jumpForce = new Vector2(0,33);
+    private Vector2 jumpForce = new Vector2(0, 33);
 
     //isGrounded
     private bool isGrounded;
@@ -35,26 +35,27 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        float playerInput = Input.GetAxis("Horizontal");
+        float playerInput = Input.GetAxis("Player 2 Horizontal");
         playerRb.AddForce(Vector2.right * speed * playerInput * Time.deltaTime);
 
         //Player jump script
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true) 
-        { 
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded == true)
+        {
             playerRb.AddForce(jumpForce, ForceMode2D.Impulse);
         }
 
         //isGrounded debug
-        if (isGrounded== true)
+        if (isGrounded == true)
         {
             debugGround.text = "Grounded";
-        } else
+        }
+        else
         {
             debugGround.text = "Not Grounded";
         }
 
-       
+
     }
-    
+
 
 }

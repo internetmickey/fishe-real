@@ -34,8 +34,8 @@ public class ScoreManager : MonoBehaviour
         blueKills++;
         redDeaths++;
 
-        blueScoreText.text = "Blue: " + blueKills.ToString() + " kills, " + redDeaths.ToString() + " deaths";
-        redScoreText.text = "Red: " + redKills.ToString() + " kills, " + blueDeaths.ToString() + " deaths";
+        blueScoreText.text = "Blue: " + blueKills.ToString() + " kills, " + blueDeaths.ToString() + " deaths";
+        redScoreText.text = "Red: " + redKills.ToString() + " kills, " + redDeaths.ToString() + " deaths";
     }
 
     public void RedKilledBlue()
@@ -43,8 +43,8 @@ public class ScoreManager : MonoBehaviour
         redKills++;
         blueDeaths++;
 
-        blueScoreText.text = "Blue: " + blueKills.ToString() + " kills, " + redDeaths.ToString() + " deaths";
-        redScoreText.text = "Red: " + redKills.ToString() + " kills, " + blueDeaths.ToString() + " deaths";
+        blueScoreText.text = "Blue: " + blueKills.ToString() + " kills, " + blueDeaths.ToString() + " deaths";
+        redScoreText.text = "Red: " + redKills.ToString() + " kills, " + redDeaths.ToString() + " deaths";
     }
 
 }

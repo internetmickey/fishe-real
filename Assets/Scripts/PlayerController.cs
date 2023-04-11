@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 jumpForce = new Vector2(0,33);
 
     //isGrounded
-    private bool isGrounded;
+    public bool isGrounded;
     public LayerMask groundLayers;
     // Start is called before the first frame update
     void Start()
@@ -46,9 +46,10 @@ public class PlayerController : MonoBehaviour
         }
 
         
-        
 
-       
+
+
+
     }
     
 
